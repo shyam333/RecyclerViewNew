@@ -52,8 +52,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         public ImageView mImageView;
         public TextView mTextview;
         public CardView mCardview;
-
-
+        
 
         public MyViewHolder(final View v1) {
             super(v1);
