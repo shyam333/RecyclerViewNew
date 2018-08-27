@@ -1,11 +1,14 @@
 package com.abiramiaudio.apps;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -19,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     List<Book> list = new ArrayList<Book>();
     RecyclerView recyclerView;
     AdView mAdview1;
+    ImageView imageView;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,15 @@ public class MainActivity extends AppCompatActivity {
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+
+        imageView = (ImageView)findViewById(R.id.img);
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,InAppPurchaseActivity.class));
+            }
+        });
 
         MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
 
