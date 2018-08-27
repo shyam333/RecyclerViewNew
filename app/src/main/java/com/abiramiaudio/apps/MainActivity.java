@@ -1,4 +1,4 @@
-package com.abiramiaudio.recyclerview;
+package com.abiramiaudio.apps;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -29,16 +29,22 @@ public class MainActivity extends AppCompatActivity {
 
         MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
 
-        list.add(new Book("32Mnz5bOY70", R.drawable.thumbnail1));
-        list.add(new Book("XdTozH06RfU", R.drawable.thumbnail2));
-        list.add(new Book("khnnaXzSl4M", R.drawable.thumnail3));
-        list.add(new Book("HdiK3VmSlPo", R.drawable.thumbnail4));
-        list.add(new Book("3PVy4tFjITY", R.drawable.thumbnail5));
-        list.add(new Book("aKZELKrZP8U", R.drawable.thumbnail6));
-        list.add(new Book("ZcODpAFqJLY", R.drawable.thumbnail7));
-        list.add(new Book("TQEZPj1vZEs", R.drawable.thumbnail8));
-        list.add(new Book("yEL9DT_pQ4o", R.drawable.thumbnail9));
-        list.add(new Book("4fFyKUGWF8s", R.drawable.thumbnail10));
+        list.add(new Book("32Mnz5bOY70"));
+
+
+//        list.add(new Book("_k9VKwUdq4s"));
+//        list.add(new Book("vOUWKc2w8lk"));
+
+
+        list.add(new Book("XdTozH06RfU"));
+        list.add(new Book("khnnaXzSl4M"));
+        list.add(new Book("HdiK3VmSlPo"));
+        list.add(new Book("3PVy4tFjITY"));
+        list.add(new Book("aKZELKrZP8U"));
+        list.add(new Book("ZcODpAFqJLY"));
+        list.add(new Book("TQEZPj1vZEs"));
+        list.add(new Book("yEL9DT_pQ4o"));
+        list.add(new Book("4fFyKUGWF8s"));
 
 
 
@@ -50,10 +56,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         recyclerView = (RecyclerView)findViewById(R.id.rc);
-        MyAdapter myAdapter = new MyAdapter(this,list);
+        NewAdapter newAdapter = new NewAdapter(this,list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
        // recyclerView.setLayoutManager(new GridLayoutManager(this,3));
-        recyclerView.setAdapter(myAdapter);
+        recyclerView.setAdapter(newAdapter);
 
 
 

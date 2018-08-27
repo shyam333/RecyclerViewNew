@@ -1,4 +1,4 @@
-package com.abiramiaudio.recyclerview;
+package com.abiramiaudio.apps;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.abiramiaudio.recyclerview;
+package com.abiramiaudio.apps;
 
 import android.content.Intent;
 

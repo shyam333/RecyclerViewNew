@@ -1,4 +1,4 @@
-package com.abiramiaudio.recyclerview;
+package com.abiramiaudio.apps;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -60,7 +60,7 @@ public class PlayerActivity extends YouTubeFailureRecoveryActivity {
         this.player = youTubePlayer;
         player.setPlayerStateChangeListener(mPlayerStateChangeListener);
         // Specify that we want to handle fullscreen behavior ourselves.
-        player.setPlayerStyle(YouTubePlayer.PlayerStyle.MINIMAL);
+        player.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
 
         if (!wasRestored) {
             player.loadVideo(id);
@@ -93,6 +93,8 @@ public class PlayerActivity extends YouTubeFailureRecoveryActivity {
         @Override
         public void onVideoEnded() {
 
+            //interstitialAd.show();
+            startActivity(new Intent(PlayerActivity.this,MainActivity.class));
             interstitialAd.show();
 
         }

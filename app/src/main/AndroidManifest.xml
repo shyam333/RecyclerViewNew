@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.abiramiaudio.recyclerview">
+    package="com.abiramiaudio.apps">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -10,9 +10,10 @@
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        >
         <activity
-            android:name=".FirstActivity"
+            android:name="com.abiramiaudio.apps.FirstActivity"
             android:screenOrientation="sensorLandscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,10 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".PlayerActivity"
+            android:name="com.abiramiaudio.apps.PlayerActivity"
             android:screenOrientation="sensorLandscape" />
-        <activity android:name=".MainActivity"></activity>
+
+        <activity android:name="com.abiramiaudio.apps.MainActivity"
+            android:screenOrientation="sensorLandscape">
+        </activity>
+
     </application>
 
 </manifest>

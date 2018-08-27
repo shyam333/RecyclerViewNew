@@ -1,4 +1,4 @@
-package com.abiramiaudio.recyclerview;
+package com.abiramiaudio.apps;
 
 import org.junit.Test;
 
